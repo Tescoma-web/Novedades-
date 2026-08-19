@@ -128,12 +128,14 @@ img{max-width:100%;display:block}
 
 /* Pegatina rotada */
 .pegatina{
-  display:inline-block;background:var(--blanco);color:var(--rojo);
+  /* En tinta y no en blanco: sobre el amarillo suave, un bloque
+     blanco no llega a separarse del fondo (1,2:1). */
+  display:inline-block;background:var(--tinta);color:var(--blanco);
   font-family:var(--titular);font-size:12.5px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;
   padding:7px 16px;border-radius:999px;
   transform:rotate(-2.5deg);
-  box-shadow:0 3px 0 rgba(0,0,0,.10);
+  box-shadow:0 3px 0 rgba(0,0,0,.14);
   margin-bottom:22px;
 }
 
@@ -147,7 +149,7 @@ img{max-width:100%;display:block}
 .rotulador{position:relative;display:inline-block;color:var(--blanco);white-space:nowrap}
 .rotulador::before{
   content:"";position:absolute;inset:2% -3% 4% -3%;z-index:-1;
-  background:var(--magenta);
+  background:var(--rojo);
   border-radius:14px 18px 12px 20px;
   transform:rotate(-1.4deg);
 }
